@@ -210,7 +210,7 @@ module.exports = postcss.plugin("postcss-custom-properties", function(options) {
       var value = decl.value
 
       // skip values that don’t contain variable functions
-      if (!value || value.indexOf(VAR_FUNC_IDENTIFIER + "(") === -1) {
+      if (!value || (value.indexOf && value.indexOf(VAR_FUNC_IDENTIFIER + "(") === -1)) {
         return
       }
 
